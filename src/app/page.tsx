@@ -65,10 +65,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-16 sm:mb-24">
             <span className="font-poppins text-[11px] uppercase tracking-[0.2em] text-sec-red font-semibold block mb-3">
-              Curricular &amp; Study Areas
+              Academic Disciplines
             </span>
             <h2 className="font-poppins text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
-              Curricula & Study Areas
+              Curricular &amp; Study Areas
             </h2>
             <p className="font-inter text-base sm:text-lg text-sec-muted mt-4 leading-relaxed font-normal">
               Explore degree pathways across leading faculties in Hungary, the Netherlands, Germany, the UK, the USA, and Australia.

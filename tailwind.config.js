@@ -22,8 +22,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)", "Poppins", "sans-serif"],
-        inter: ["var(--font-inter)", "Inter", "sans-serif"],
+        satoshi: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        poppins: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        inter: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        sans: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0px",

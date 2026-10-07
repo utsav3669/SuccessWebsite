@@ -67,18 +67,18 @@ export const Navbar: React.FC = () => {
             : "bg-white/90 backdrop-blur-sm border-b border-black/5 py-3.5"
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-          <div className="flex items-center justify-between gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
-            {/* 1. Brand Logo / Name */}
-            <div className="shrink-0">
-              <SecLogo size={scrolled ? "sm" : "md"} showTagline={false} />
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+          <div className="w-full flex items-center justify-between gap-3 lg:gap-4 xl:gap-8 2xl:gap-12">
+            {/* 1. Brand Logo / Name: SUCCESS EDUCATIONAL CONSULTANCY */}
+            <div className="shrink-0 pr-1 xl:pr-4">
+              <SecLogo size={scrolled ? "sm" : "md"} showTagline={false} showSubtitle={false} />
             </div>
 
-            {/* 2. All Navigation Links: Kept close to each other in the center with balanced spacing */}
-            <nav className="hidden lg:flex items-center justify-center flex-1 mx-1 xl:mx-3 gap-0.5 xl:gap-1 2xl:gap-1.5">
+            {/* 2. All Navigation Links: Tightly grouped in center with minimal gap between pages */}
+            <nav className="hidden lg:flex items-center justify-center flex-1 mx-1 xl:mx-2 gap-0 xl:gap-0.5">
               <Link
                 href="/"
-                className={`px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                className={`px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                   pathname === "/"
                     ? "text-sec-navy font-bold"
                     : "text-sec-dark/70 hover:text-sec-navy"
@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
 
               <Link
                 href="/about"
-                className={`px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                className={`px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                   pathname === "/about"
                     ? "text-sec-navy font-bold"
                     : "text-sec-dark/70 hover:text-sec-navy"
@@ -105,7 +105,7 @@ export const Navbar: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1 xl:gap-1.5 px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                  className={`flex items-center gap-1 px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                     pathname.startsWith("/study-destinations") || activeDropdown === "destinations"
                       ? "text-sec-navy font-bold"
                       : "text-sec-dark/70 hover:text-sec-navy"
@@ -171,7 +171,7 @@ export const Navbar: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1 xl:gap-1.5 px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                  className={`flex items-center gap-1 px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                     pathname.startsWith("/courses") || activeDropdown === "courses"
                       ? "text-sec-navy font-bold"
                       : "text-sec-dark/70 hover:text-sec-navy"
@@ -245,7 +245,7 @@ export const Navbar: React.FC = () => {
               {/* Universities Link */}
               <Link
                 href="/universities"
-                className={`px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                className={`px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                   pathname === "/universities"
                     ? "text-sec-navy font-bold"
                     : "text-sec-dark/70 hover:text-sec-navy"
@@ -257,7 +257,7 @@ export const Navbar: React.FC = () => {
               {/* Test Preparation Link */}
               <Link
                 href="/test-preparation"
-                className={`px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                className={`px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                   pathname.startsWith("/test-preparation")
                     ? "text-sec-navy font-bold"
                     : "text-sec-dark/70 hover:text-sec-navy"
@@ -273,7 +273,7 @@ export const Navbar: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1 xl:gap-1.5 px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                  className={`flex items-center gap-1 px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                     pathname.startsWith("/services") || activeDropdown === "services"
                       ? "text-sec-navy font-bold"
                       : "text-sec-dark/70 hover:text-sec-navy"
@@ -336,7 +336,7 @@ export const Navbar: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1 xl:gap-1.5 px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                  className={`flex items-center gap-1 px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                     pathname.startsWith("/resources") || activeDropdown === "resources"
                       ? "text-sec-navy font-bold"
                       : "text-sec-dark/70 hover:text-sec-navy"
@@ -435,7 +435,7 @@ export const Navbar: React.FC = () => {
               {/* Contact Link */}
               <Link
                 href="/contact"
-                className={`px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
+                className={`px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
                   pathname === "/contact"
                     ? "text-sec-navy font-bold"
                     : "text-sec-dark/70 hover:text-sec-navy"
@@ -445,24 +445,24 @@ export const Navbar: React.FC = () => {
               </Link>
             </nav>
 
-            {/* Desktop Action CTA - One Single Clean Line */}
-            <div className="hidden lg:flex items-center shrink-0">
+            {/* Desktop Action CTA - One Single Clean Line with increased breathing room */}
+            <div className="hidden lg:flex items-center shrink-0 pl-2 xl:pl-6">
               <Link
                 href="/book-counselling"
-                className="inline-flex items-center justify-center whitespace-nowrap shrink-0 px-3.5 xl:px-5 py-2 xl:py-2.5 text-[11px] xl:text-xs font-semibold uppercase tracking-wider text-white bg-sec-red hover:bg-sec-navy transition-all duration-300 border border-sec-red hover:border-sec-navy"
+                className="inline-flex items-center justify-center whitespace-nowrap shrink-0 px-4 xl:px-5 py-2 xl:py-2.5 text-[11px] xl:text-xs font-semibold uppercase tracking-wider text-white bg-sec-red hover:bg-sec-navy transition-all duration-300 border border-sec-red hover:border-sec-navy"
               >
                 Book Counselling
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex items-center lg:hidden">
+            <div className="flex items-center lg:hidden shrink-0">
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="p-2 text-sec-dark hover:text-sec-navy focus:outline-none"
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
               >
-                {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileOpen ? <X className="w-6 h-6 text-sec-red" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>

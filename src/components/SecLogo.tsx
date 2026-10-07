@@ -5,6 +5,7 @@ import Image from "next/image";
 interface SecLogoProps {
   variant?: "light" | "dark";
   showTagline?: boolean;
+  showSubtitle?: boolean;
   className?: string;
   size?: "sm" | "md" | "lg";
 }
@@ -12,6 +13,7 @@ interface SecLogoProps {
 export const SecLogo: React.FC<SecLogoProps> = ({
   variant = "light",
   showTagline = false,
+  showSubtitle = true,
   className = "",
   size = "md"
 }) => {
@@ -25,13 +27,12 @@ export const SecLogo: React.FC<SecLogoProps> = ({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-3.5 group transition-opacity hover:opacity-95 ${className}`}
+      className={`inline-flex items-center gap-2 sm:gap-3.5 group transition-opacity hover:opacity-95 ${className}`}
       aria-label="Success Educational Consultancy - Home"
     >
       {/* Official SEC Crest Emblem (High-Resolution PNG) */}
       <div
-        className="relative flex-shrink-0 flex items-center justify-center"
-        style={{ width: `${logoDimensions}px`, height: `${logoDimensions}px` }}
+        className="relative flex-shrink-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12"
       >
         <Image
           src="/images/sec-logo-transparent.png"
@@ -45,32 +46,30 @@ export const SecLogo: React.FC<SecLogoProps> = ({
 
       {/* Brand Typography Wordmark */}
       <div className="flex flex-col justify-center">
-        <div className="flex items-center gap-1.5 leading-none">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-1.5 leading-tight sm:leading-none">
           <span
-            className="font-poppins font-bold tracking-tight"
+            className="font-poppins font-bold tracking-tight whitespace-nowrap text-[13px] sm:text-[13.5px] xl:text-[15px]"
             style={{
               color: textColor,
-              fontSize: `${17 * scale}px`
             }}
           >
             SUCCESS
           </span>
           <span
-            className="font-poppins font-semibold text-sec-red tracking-tight"
-            style={{
-              fontSize: `${17 * scale}px`
-            }}
+            className="font-poppins font-semibold text-sec-red tracking-tight whitespace-nowrap text-[10px] sm:text-[13.5px] xl:text-[15px]"
           >
-            CONSULTANCY
+            EDUCATIONAL CONSULTANCY
           </span>
         </div>
         
-        <span
-          className="font-poppins text-[9.5px] uppercase font-medium tracking-[0.18em] mt-1"
-          style={{ color: subtextColor }}
-        >
-          Educational Consultancy (P.) Ltd.
-        </span>
+        {showSubtitle && (
+          <span
+            className="font-poppins text-[9.5px] uppercase font-medium tracking-[0.18em] mt-1"
+            style={{ color: subtextColor }}
+          >
+            (P.) Ltd. • Kathmandu
+          </span>
+        )}
 
         {showTagline && (
           <span

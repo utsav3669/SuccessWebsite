@@ -40,7 +40,7 @@ export const destinations: Destination[] = [
     tagline: "High Quality European Education in the Heart of Europe",
     shortDescription: "Study in the heart of Europe with accessible tuition, internationally recognized degrees, and rich student life.",
     description: "Hungary stands at the historic heart of Central Europe, offering higher education with prestigious universities dating back centuries. With degrees accredited across the European Union and worldwide, students benefit from modern laboratories, vibrant student cities such as Budapest and Debrecen, and affordable living compared to Western Europe.",
-    image: "https://images.unsplash.com/photo-1549877452-9c387954fbc2?auto=format&fit=crop&w=1600&q=80", // Budapest parliament / Danube
+    image: "/images/destinations/hungary-university.jpg", // Eötvös Loránd University (ELTE) campus, Budapest
     flag: "🇭🇺",
     capital: "Budapest",
     currency: "Hungarian Forint (HUF) / Euro (€)",
@@ -111,7 +111,7 @@ export const destinations: Destination[] = [
     tagline: "Pioneering Innovation and World-Class English Programs",
     shortDescription: "World-class education with over 2,100 programs taught in English and a culture centered on problem-solving.",
     description: "The Netherlands is known for its progressive teaching style, high standard of living, and an extensive selection of English-taught degree programs in continental Europe. Dutch universities rank consistently in the world's top 200, emphasizing practical problem-based learning and international research collaboration.",
-    image: "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=1600&q=80", // Amsterdam canal
+    image: "/images/destinations/netherlands-university.jpg", // Dutch university research campus & academic faculties
     flag: "🇳🇱",
     capital: "Amsterdam",
     currency: "Euro (€)",
@@ -158,7 +158,7 @@ export const destinations: Destination[] = [
     tagline: "Engineering Excellence and Tuition-Free Public Universities",
     shortDescription: "Renowned for tuition-free public universities, technological leadership, and Europe's largest economy.",
     description: "Germany is Europe's economic powerhouse, offering rigorous academic standards, cutting-edge laboratory facilities, and highly affordable public education. Most public universities charge minimal administrative semester contributions rather than steep tuition fees.",
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=80", // Germany architecture
+    image: "/images/destinations/germany-university.jpg", // German public research university campus & modern lecture hall
     flag: "🇩🇪",
     capital: "Berlin",
     currency: "Euro (€)",
@@ -205,7 +205,7 @@ export const destinations: Destination[] = [
     tagline: "Globally Celebrated Degrees and Century-Old Traditions",
     shortDescription: "World-renowned academic pedigree, 1-year master's degrees, and a 2-year Graduate Route visa.",
     description: "The UK is home to some of the world's most historic and respected educational institutions. British universities are recognized worldwide by employers and academic bodies, offering focused degree durations (typically 3 years for Bachelor's and 1 year for Master's) that save time and tuition.",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=80", // London Westminster
+    image: "/images/destinations/uk-university.jpg", // British collegiate university quadrangle & stone cloisters
     flag: "🇬🇧",
     capital: "London",
     currency: "British Pound (£)",
@@ -252,7 +252,7 @@ export const destinations: Destination[] = [
     tagline: "Unmatched Academic Flexibility and Research Resources",
     shortDescription: "Diverse course options, campus culture, generous research grants, and STEM OPT extension opportunities.",
     description: "The United States hosts the largest number of international students globally, recognized for campus diversity, flexible curriculum choices (majors/minors), and cutting-edge research facilities across thousands of accredited colleges and universities.",
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80", // San Francisco / US Campus
+    image: "/images/destinations/usa-university.jpg", // American public research university campus quad & neoclassical portico
     flag: "🇺🇸",
     capital: "Washington, D.C.",
     currency: "US Dollar ($)",
@@ -299,7 +299,7 @@ export const destinations: Destination[] = [
     tagline: "World-Class Quality of Life, Research and Post-Study Pathways",
     shortDescription: "High standard of living, rigorous quality assurance under ESOS, and progressive post-study work opportunities.",
     description: "Australia delivers exceptional educational standards backed by government consumer protections (ESOS and CRICOS frameworks). Renowned for welcoming multicultural cities, clean outdoor lifestyle, and strong industry linkages across healthcare, engineering, and digital sectors.",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1600&q=80", // Sydney Opera House
+    image: "/images/destinations/australia-university.jpg", // Australian sandstone collegiate quadrangle & jacarandas
     flag: "🇦🇺",
     capital: "Canberra",
     currency: "Australian Dollar (AUD $)",
@@ -346,7 +346,7 @@ export const destinations: Destination[] = [
     tagline: "Sustainability, Innovation, and Critical Thinking in Scandinavia",
     shortDescription: "Study in one of the most innovative and sustainable societies in the world, renowned for research and equality.",
     description: "Sweden is a global pioneer in sustainability, clean technology, and creative design. Swedish universities foster an informal, non-hierarchical learning environment where students are encouraged to think critically, challenge conventions, and turn concepts into practical innovation.",
-    image: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=1600&q=80", // Stockholm
+    image: "/images/destinations/sweden-university.jpg", // Nordic Scandinavian university campus & Humaniora faculty
     flag: "🇸🇪",
     capital: "Stockholm",
     currency: "Swedish Krona (SEK)",

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroSection } from "@/components/HeroSection";
+import { AirplaneIntroLoader } from "@/components/AirplaneIntroLoader";
 import { TrustStrip } from "@/components/TrustStrip";
 import { StudyDestinationsGrid } from "@/components/StudyDestinationsGrid";
 import { CourseFinder } from "@/components/CourseFinder";
@@ -18,7 +19,10 @@ import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 export default function HomePage() {
   return (
     <>
-      {/* 1. HERO with Background Motion System (Airplane & Flight Path behind typography) */}
+      {/* 0. INTRO TAKEOFF LOADING SCREEN (1.4s automatic takeoff, zero flight path, smooth reveal) */}
+      <AirplaneIntroLoader />
+
+      {/* 1. HERO (Bachelor Students on European Campus, Clean 'WHAT WE ARE' Eyebrow) */}
       <HeroSection />
 
       {/* 2. EDITORIAL STATEMENT & TRUST PILLARS (With SEC Since 2007) */}
@@ -32,8 +36,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="group relative aspect-[21/9] sm:aspect-[24/9] w-full bg-slate-100 border border-sec-gray-light overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=80"
-              alt="Historic European university library and campus architecture"
+              src="/images/destinations/hungary-university.jpg"
+              alt="Eötvös Loránd University historic European academic campus and university quadrangle"
               fill
               sizes="100vw"
               className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"

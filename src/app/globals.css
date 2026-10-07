@@ -20,6 +20,12 @@
     color: #18181B;
     background-color: #FFFFFF;
     font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
   }
 
   /* Sharp rectangular geometric edges everywhere */

@@ -36,7 +36,7 @@ export const StudyDestinationsGrid: React.FC = () => {
             <div className="lg:col-span-7 group relative aspect-[16/10] bg-slate-100 border border-sec-gray-light overflow-hidden">
               <Image
                 src={hungary.image}
-                alt="Budapest, Hungary along the Danube River"
+                alt="Eötvös Loránd University campus architecture, Budapest, Hungary"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
@@ -91,7 +91,7 @@ export const StudyDestinationsGrid: React.FC = () => {
             <div className="relative aspect-[4/3] bg-slate-100 border border-sec-gray-light overflow-hidden">
               <Image
                 src={netherlands.image}
-                alt="Amsterdam, Netherlands canals"
+                alt="Modern Dutch university campus and research faculties, Netherlands"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
@@ -126,7 +126,7 @@ export const StudyDestinationsGrid: React.FC = () => {
             <div className="relative aspect-[4/3] bg-slate-100 border border-sec-gray-light overflow-hidden">
               <Image
                 src={germany.image}
-                alt="Historic architecture and university in Germany"
+                alt="German public research university campus and lecture hall, Germany"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"

@@ -68,14 +68,14 @@ export const Navbar: React.FC = () => {
         }`}
       >
         <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-          <div className="w-full flex items-center justify-between gap-3 lg:gap-4 xl:gap-8 2xl:gap-12">
+          <div className="w-full flex items-center justify-between lg:justify-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
             {/* 1. Brand Logo / Name: SUCCESS EDUCATIONAL CONSULTANCY */}
-            <div className="shrink-0 pr-1 xl:pr-4">
+            <div className="shrink-0">
               <SecLogo size={scrolled ? "sm" : "md"} showTagline={false} showSubtitle={false} />
             </div>
 
-            {/* 2. All Navigation Links: Tightly grouped in center with minimal gap between pages */}
-            <nav className="hidden lg:flex items-center justify-center flex-1 mx-1 xl:mx-2 gap-0 xl:gap-0.5">
+            {/* 2. All Navigation Links: Centered together with brand and CTA */}
+            <nav className="hidden lg:flex items-center justify-center shrink-0 gap-0 xl:gap-0.5">
               <Link
                 href="/"
                 className={`px-1.5 xl:px-2 py-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-colors ${
@@ -445,8 +445,8 @@ export const Navbar: React.FC = () => {
               </Link>
             </nav>
 
-            {/* Desktop Action CTA - One Single Clean Line with increased breathing room */}
-            <div className="hidden lg:flex items-center shrink-0 pl-2 xl:pl-6">
+            {/* Desktop Action CTA */}
+            <div className="hidden lg:flex items-center shrink-0">
               <Link
                 href="/book-counselling"
                 className="inline-flex items-center justify-center whitespace-nowrap shrink-0 px-4 xl:px-5 py-2 xl:py-2.5 text-[11px] xl:text-xs font-semibold uppercase tracking-wider text-white bg-sec-red hover:bg-sec-navy transition-all duration-300 border border-sec-red hover:border-sec-navy"

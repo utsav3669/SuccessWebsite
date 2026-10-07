@@ -75,13 +75,6 @@ export default function StudyGuidesPage() {
                   <span>Explore {guide.country} Page</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
-
-                <Link
-                  href={`/book-counselling?destination=${encodeURIComponent(guide.country)}`}
-                  className="px-4 py-2 bg-sec-offwhite hover:bg-sec-gray-light text-sec-dark text-xs font-semibold font-poppins rounded-btn transition-colors"
-                >
-                  Request Guide Copy
-                </Link>
               </div>
             </div>
           ))}

@@ -95,7 +95,7 @@ export const CourseFinder: React.FC<CourseFinderProps> = ({
       </div>
 
       <div className="pt-4 flex items-center justify-between text-xs text-sec-muted font-inter">
-        <span>Verified degree syllabi across 7 destination countries</span>
+        <span>Verified degree syllabus across 7 destination countries</span>
         <Link
           href="/courses"
           className="editorial-link font-poppins font-semibold uppercase tracking-wider text-sec-navy hover:text-sec-red"

@@ -44,18 +44,31 @@ export const AirplaneIntroLoader: React.FC<AirplaneIntroLoaderProps> = ({ onComp
   );
 
   useEffect(() => {
-    setMounted(true);
-
-    // Fast skip for headless testing or manual dev inspection (?skipIntro=true)
-    if (typeof window !== "undefined" && window.location.search.includes("skipIntro")) {
-      setIsVisible(false);
-      if (onComplete) onComplete();
-      return;
+    // 1. Check if user already saw the intro animation in this session or locally
+    try {
+      if (
+        typeof window !== "undefined" &&
+        (sessionStorage.getItem("sec_intro_shown") === "true" ||
+          localStorage.getItem("sec_intro_shown") === "true" ||
+          window.location.search.includes("skipIntro"))
+      ) {
+        setIsVisible(false);
+        if (onComplete) onComplete();
+        return;
+      }
+    } catch (e) {
+      // Storage access safety fallback
     }
+
+    setMounted(true);
 
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) {
+      try {
+        sessionStorage.setItem("sec_intro_shown", "true");
+        localStorage.setItem("sec_intro_shown", "true");
+      } catch (e) {}
       const timer = setTimeout(() => {
         setLoaderStage("revealing");
         setTimeout(() => {
@@ -125,6 +138,12 @@ export const AirplaneIntroLoader: React.FC<AirplaneIntroLoaderProps> = ({ onComp
       if (rawProgress < 1) {
         reqRef.current = requestAnimationFrame(animate);
       } else {
+        // Store session flag that intro animation has finished
+        try {
+          sessionStorage.setItem("sec_intro_shown", "true");
+          localStorage.setItem("sec_intro_shown", "true");
+        } catch (e) {}
+
         // Airplane completed takeoff: Transition to the connecting animation stage
         setLoaderStage("connecting");
 

@@ -22,6 +22,8 @@ interface GeographicWorldMapProps {
   onHoverDestination?: (dest: DestinationRoute | null) => void;
   className?: string;
   airplaneScrollProgress?: number; // for hero scroll-linked airplane
+  preserveAspectRatio?: string;
+  viewBox?: string;
 }
 
 export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
@@ -33,6 +35,8 @@ export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
   activeDestinationId = null,
   onHoverDestination,
   className = "",
+  preserveAspectRatio = "xMidYMid meet",
+  viewBox = "-15 -25 1230 700",
 }) => {
   const [internalActiveRoute, setInternalActiveRoute] = useState<string | null>(null);
 
@@ -72,14 +76,14 @@ export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
 
   return (
     <div
-      className={`relative w-full h-full select-none overflow-hidden ${
+      className={`relative w-full h-full select-none overflow-hidden flex items-center justify-center ${
         isDark ? "bg-[#071326]" : "bg-transparent"
       } ${className}`}
     >
       <svg
-        viewBox={`0 0 ${MAP_CONFIG.width} ${MAP_CONFIG.height}`}
-        className="w-full h-full object-cover"
-        preserveAspectRatio="xMidYMid slice"
+        viewBox={viewBox}
+        className="w-full h-full max-h-full"
+        preserveAspectRatio={preserveAspectRatio}
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -100,78 +104,78 @@ export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
           </filter>
         </defs>
 
-        {/* 1. MATHEMATICAL GRATICULES (Real geographic lat/long grid) */}
+        {/* 1. MATHEMATICAL GRATICULES (Real geographic lat/long grid extending across viewBox) */}
         <g stroke={graticuleStroke} strokeWidth="0.75" strokeDasharray="3 6">
           {/* Equator (lat = 0) */}
           <line
-            x1="0"
+            x1="-50"
             y1={projectGeo(0, 0).y}
-            x2={MAP_CONFIG.width}
+            x2="1250"
             y2={projectGeo(0, 0).y}
             strokeWidth="1"
           />
           {/* Tropic of Cancer (lat = 23.4368° N, near Kathmandu at 27.7°) */}
           <line
-            x1="0"
+            x1="-50"
             y1={projectGeo(0, 23.4368).y}
-            x2={MAP_CONFIG.width}
+            x2="1250"
             y2={projectGeo(0, 23.4368).y}
           />
           {/* Tropic of Capricorn (lat = -23.4368° S) */}
           <line
-            x1="0"
+            x1="-50"
             y1={projectGeo(0, -23.4368).y}
-            x2={MAP_CONFIG.width}
+            x2="1250"
             y2={projectGeo(0, -23.4368).y}
           />
           {/* Arctic Circle (lat = 66.56° N) */}
           <line
-            x1="0"
+            x1="-50"
             y1={projectGeo(0, 66.56).y}
-            x2={MAP_CONFIG.width}
+            x2="1250"
             y2={projectGeo(0, 66.56).y}
           />
           {/* Prime Meridian (lon = 0) */}
           <line
             x1={projectGeo(0, 0).x}
-            y1="0"
+            y1="-50"
             x2={projectGeo(0, 0).x}
-            y2={MAP_CONFIG.height}
+            y2="750"
           />
           {/* Greenwich to Kathmandu meridian (lon = 85.324° E) */}
           <line
             x1={KATHMANDU_PROJECTED.x}
-            y1="0"
+            y1="-50"
             x2={KATHMANDU_PROJECTED.x}
-            y2={MAP_CONFIG.height}
+            y2="750"
           />
           {/* 60°E Meridian */}
           <line
             x1={projectGeo(60, 0).x}
-            y1="0"
+            y1="-50"
             x2={projectGeo(60, 0).x}
-            y2={MAP_CONFIG.height}
+            y2="750"
           />
           {/* 120°E Meridian */}
           <line
             x1={projectGeo(120, 0).x}
-            y1="0"
+            y1="-50"
             x2={projectGeo(120, 0).x}
-            y2={MAP_CONFIG.height}
+            y2="750"
           />
           {/* -60°W Meridian */}
           <line
             x1={projectGeo(-60, 0).x}
-            y1="0"
+            y1="-50"
             x2={projectGeo(-60, 0).x}
-            y2={MAP_CONFIG.height}
+            y2="750"
           />
           {/* -120°W Meridian */}
           <line
             x1={projectGeo(-120, 0).x}
-            y1="0"
+            y1="-50"
             x2={projectGeo(-120, 0).x}
-            y2={MAP_CONFIG.height}
+            y2="750"
           />
         </g>
 
@@ -358,7 +362,7 @@ export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
 
       {/* 7. RESTRAINED EDITORIAL GEOGRAPHIC LEGEND STRIP */}
       {interactive && (
-        <div className="absolute bottom-4 left-6 right-6 z-10 hidden sm:flex items-center justify-between text-[10px] font-satoshi tracking-wider text-slate-400 border-t border-white/10 pt-3">
+        <div className="absolute bottom-2 left-4 right-4 z-10 hidden sm:flex items-center justify-between text-[10px] font-satoshi tracking-wider text-slate-300 bg-[#071326]/85 backdrop-blur-sm border border-white/10 px-4 py-1.5 shadow-md">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-white">
               <span className="w-2 h-2 bg-sec-red rounded-full inline-block animate-pulse" />

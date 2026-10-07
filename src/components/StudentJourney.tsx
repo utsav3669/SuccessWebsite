@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 interface Step {
   num: string;
@@ -77,22 +78,24 @@ export const StudentJourney: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-24 sm:py-36 bg-white border-t border-sec-gray-light">
+    <section className="py-14 sm:py-20 bg-white border-t border-sec-gray-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-20 sm:mb-28">
-          <span className="font-poppins text-[11px] uppercase tracking-[0.2em] text-sec-red font-semibold block mb-3">
-            The Roadmap
-          </span>
-          <h2 className="font-poppins text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
-            From Dream to Destination
-          </h2>
-          <p className="font-inter text-base sm:text-lg text-sec-muted mt-4 leading-relaxed font-normal">
-            A nine-stage progression designed to give students and parents complete clarity from Kathmandu to your international campus.
-          </p>
-        </div>
+        <ScrollReveal direction="up" distance={20} duration={0.7}>
+          <div className="max-w-3xl mb-10 sm:mb-14">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-sec-red font-semibold block mb-2">
+              The Roadmap
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
+              From Dream to Destination
+            </h2>
+            <p className="text-base sm:text-lg text-sec-muted mt-2.5 sm:mt-3 leading-relaxed font-normal">
+              A nine-stage progression designed to give students and parents complete clarity from Kathmandu to your international campus.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        {/* Minimalist Architectural Timeline (No rounded boxes) */}
+        {/* Minimalist Architectural Timeline */}
         <div ref={containerRef} className="relative max-w-4xl">
           {/* Vertical Hairline Guide */}
           <div className="absolute left-4 sm:left-8 top-3 bottom-8 w-[1px] bg-sec-gray-light">
@@ -106,7 +109,7 @@ export const StudentJourney: React.FC = () => {
           </div>
 
           {/* Sequential Stages */}
-          <div className="space-y-12 sm:space-y-16">
+          <div className="space-y-7 sm:space-y-9">
             {steps.map((step, idx) => {
               const isActive = idx <= activeStepIndex;
               const isCurrent = idx === activeStepIndex;
@@ -130,13 +133,13 @@ export const StudentJourney: React.FC = () => {
                   />
 
                   {/* Stage Typography */}
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     <div className="flex items-baseline gap-4">
-                      <span className="font-mono text-xs sm:text-sm text-sec-red font-semibold">
+                      <span className="text-xs sm:text-sm text-sec-red font-semibold">
                         {step.num}
                       </span>
                       <h3
-                        className={`font-poppins text-lg sm:text-2xl font-bold tracking-tight transition-colors ${
+                        className={`text-lg sm:text-2xl font-bold tracking-tight transition-colors ${
                           isCurrent ? "text-sec-dark" : "text-sec-dark/90"
                         }`}
                       >
@@ -144,7 +147,7 @@ export const StudentJourney: React.FC = () => {
                       </h3>
                     </div>
 
-                    <p className="font-inter text-sm sm:text-base text-sec-muted leading-relaxed max-w-2xl font-normal">
+                    <p className="text-sm sm:text-base text-sec-muted leading-relaxed max-w-2xl font-normal">
                       {step.desc}
                     </p>
                   </div>

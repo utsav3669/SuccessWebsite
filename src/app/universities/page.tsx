@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function UniversitiesPage() {
   return (
-    <div className="pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <div className="pt-16 pb-14 sm:pt-20 sm:pb-20 font-satoshi">
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
-        <div className="max-w-3xl space-y-4">
-          <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red">
+        <div className="max-w-3xl space-y-3">
+          <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red">
             Higher Education Network
           </span>
-          <h1 className="font-poppins text-4xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
+          <h1 className="font-satoshi text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
             Universities Directory
           </h1>
-          <p className="font-inter text-base sm:text-lg text-sec-muted leading-relaxed">
+          <p className="font-satoshi text-base sm:text-lg text-sec-muted leading-relaxed">
             Discover accredited universities known for outstanding research, international faculty, and industry-connected degree programs.
           </p>
         </div>

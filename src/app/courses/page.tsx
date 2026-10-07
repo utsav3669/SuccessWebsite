@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 
 export default function CoursesPage() {
   return (
-    <div className="pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <div className="pt-16 pb-14 sm:pt-20 sm:pb-20 font-satoshi">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
-        <div className="max-w-3xl space-y-4">
-          <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
+        <div className="max-w-3xl space-y-3">
+          <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red">
             Academic Programs
           </span>
-          <h1 className="font-poppins text-4xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
+          <h1 className="font-satoshi text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
             Explore Courses Worldwide
           </h1>
-          <p className="font-inter text-base sm:text-lg text-sec-muted leading-relaxed">
+          <p className="font-satoshi text-base sm:text-lg text-sec-muted leading-relaxed">
             Find accredited degrees matched to your academic goals. Filter by level, discipline, or target country.
           </p>
         </div>

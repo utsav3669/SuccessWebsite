@@ -34,9 +34,9 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   });
 
   return (
-    <div className="w-full space-y-6">
+    <div className="w-full space-y-5 font-satoshi">
       {/* Category Tabs & Search Bar */}
-      <div className="space-y-4">
+      <div className="space-y-3.5">
         {/* Search */}
         <div className="relative max-w-md">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-sec-muted" />
@@ -45,18 +45,18 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
             placeholder="Search questions (e.g. visa, cost, Hungary, IELTS)..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-white border border-sec-gray-light rounded-input text-sec-dark focus:border-sec-navy transition-colors"
+            className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-white border border-sec-gray-light rounded-input text-sec-dark focus:border-sec-navy transition-colors font-satoshi"
           />
         </div>
 
         {/* Categories */}
         {showCategoryTabs && query.trim() === "" && (
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none">
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none">
             {faqCategories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all font-poppins ${
+                className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all font-satoshi ${
                   activeCategory === cat
                     ? "bg-sec-navy text-white shadow-sm"
                     : "bg-white text-sec-dark border border-sec-gray-light hover:bg-sec-offwhite"
@@ -70,7 +70,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
       </div>
 
       {/* Accordion List */}
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {filteredFaqs.length > 0 ? (
           filteredFaqs.map((faq) => {
             const isOpen = openIds.includes(faq.id);
@@ -81,10 +81,10 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
               >
                 <button
                   onClick={() => toggleOpen(faq.id)}
-                  className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full text-left px-5 py-3.5 flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-poppins text-sm sm:text-base font-semibold text-sec-dark">
+                  <span className="font-satoshi text-sm sm:text-base font-semibold text-sec-dark">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -95,9 +95,9 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-sec-muted leading-relaxed border-t border-sec-gray-light/60 font-inter">
+                  <div className="px-5 pb-4 pt-1 text-xs sm:text-sm text-sec-muted leading-relaxed border-t border-sec-gray-light/60 font-satoshi">
                     <p>{faq.answer}</p>
-                    <span className="inline-block mt-3 px-2 py-0.5 text-[10px] font-medium text-sec-navy bg-sec-navy/5 rounded">
+                    <span className="inline-block mt-2.5 px-2 py-0.5 text-[10px] font-medium text-sec-navy bg-sec-navy/5 rounded font-satoshi">
                       Category: {faq.category}
                     </span>
                   </div>
@@ -106,12 +106,9 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
             );
           })
         ) : (
-          <div className="p-8 text-center bg-white rounded-card border border-sec-gray-light">
-            <HelpCircle className="w-8 h-8 text-sec-muted mx-auto mb-2 opacity-40" />
-            <p className="text-sm text-sec-dark font-medium">No questions matched your search.</p>
-            <p className="text-xs text-sec-muted mt-1">
-              Have a specific question? Please reach out to our counselling team directly.
-            </p>
+          <div className="text-center py-8 bg-white rounded-card border border-sec-gray-light text-sec-muted text-xs">
+            <HelpCircle className="w-6 h-6 mx-auto mb-2 text-sec-muted/60" />
+            <p>No questions matched your search query. Contact our office for immediate answers.</p>
           </div>
         )}
       </div>

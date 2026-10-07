@@ -45,17 +45,17 @@ const resourceSections = [
 
 export default function ResourcesPage() {
   return (
-    <div className="pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <div className="pt-16 pb-14 sm:pt-20 sm:pb-20 font-satoshi">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-20">
-        <div className="max-w-3xl space-y-4">
-          <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
+        <div className="max-w-3xl space-y-3">
+          <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red">
             Knowledge Hub
           </span>
-          <h1 className="font-poppins text-4xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
+          <h1 className="font-satoshi text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
             Resources for Your Global Journey
           </h1>
-          <p className="font-inter text-base sm:text-lg text-sec-muted leading-relaxed">
+          <p className="font-satoshi text-base sm:text-lg text-sec-muted leading-relaxed">
             Authentic, up-to-date guidance written by education specialists in Kathmandu to help you prepare effectively.
           </p>
         </div>
@@ -63,30 +63,30 @@ export default function ResourcesPage() {
 
       {/* Resource Modules Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {resourceSections.map((item, i) => {
             const Icon = item.icon;
             return (
               <Link
                 key={i}
                 href={item.href}
-                className="group bg-white rounded-card border border-sec-gray-light p-6 sm:p-7 shadow-subtle hover:border-sec-navy/30 hover:shadow-card transition-all duration-200 flex flex-col justify-between"
+                className="group bg-white rounded-card border border-sec-gray-light p-5 sm:p-6 shadow-subtle hover:border-sec-navy/30 hover:shadow-card transition-all duration-200 flex flex-col justify-between"
               >
-                <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-md bg-sec-navy/10 text-sec-navy group-hover:bg-sec-red group-hover:text-white transition-colors flex items-center justify-center">
-                    <Icon className="w-5 h-5" />
+                <div className="space-y-3">
+                  <div className="w-9 h-9 rounded-md bg-sec-navy/10 text-sec-navy group-hover:bg-sec-red group-hover:text-white transition-colors flex items-center justify-center">
+                    <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <h3 className="font-poppins text-lg font-bold text-sec-dark group-hover:text-sec-navy transition-colors">
+                    <h3 className="font-satoshi text-lg font-bold text-sec-dark group-hover:text-sec-navy transition-colors">
                       {item.title}
                     </h3>
-                    <p className="font-inter text-xs sm:text-sm text-sec-muted mt-2 leading-relaxed">
+                    <p className="font-satoshi text-xs sm:text-sm text-sec-muted mt-1.5 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-sec-gray-light/60 flex items-center justify-between text-xs font-semibold font-poppins text-sec-navy group-hover:text-sec-red">
+                <div className="pt-4 mt-4 border-t border-sec-gray-light/60 flex items-center justify-between text-xs font-semibold font-satoshi text-sec-navy group-hover:text-sec-red">
                   <span>Explore Section</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>

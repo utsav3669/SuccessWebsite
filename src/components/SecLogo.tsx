@@ -48,7 +48,7 @@ export const SecLogo: React.FC<SecLogoProps> = ({
       <div className="flex flex-col justify-center">
         <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-1.5 leading-tight sm:leading-none">
           <span
-            className="font-poppins font-bold tracking-tight whitespace-nowrap text-[13px] sm:text-[13.5px] xl:text-[15px]"
+            className="font-satoshi font-bold tracking-tight whitespace-nowrap text-[13px] sm:text-[13.5px] xl:text-[15px]"
             style={{
               color: textColor,
             }}
@@ -56,7 +56,7 @@ export const SecLogo: React.FC<SecLogoProps> = ({
             SUCCESS
           </span>
           <span
-            className="font-poppins font-semibold text-sec-red tracking-tight whitespace-nowrap text-[10px] sm:text-[13.5px] xl:text-[15px]"
+            className="font-satoshi font-semibold text-sec-red tracking-tight whitespace-nowrap text-[10px] sm:text-[13.5px] xl:text-[15px]"
           >
             EDUCATIONAL CONSULTANCY
           </span>
@@ -64,7 +64,7 @@ export const SecLogo: React.FC<SecLogoProps> = ({
         
         {showSubtitle && (
           <span
-            className="font-poppins text-[9.5px] uppercase font-medium tracking-[0.18em] mt-1"
+            className="font-satoshi text-[9.5px] uppercase font-medium tracking-[0.18em] mt-1"
             style={{ color: subtextColor }}
           >
             (P.) Ltd. • Kathmandu
@@ -73,7 +73,7 @@ export const SecLogo: React.FC<SecLogoProps> = ({
 
         {showTagline && (
           <span
-            className="font-inter text-[9px] italic hidden sm:block mt-0.5"
+            className="font-satoshi text-[9px] italic hidden sm:block mt-0.5"
             style={{ color: isDark ? "#94A3B8" : "#71717A" }}
           >
             Educating The World For Success

@@ -34,10 +34,10 @@ export const CourseFinder: React.FC<CourseFinderProps> = ({
   );
 
   return (
-    <div className="w-full space-y-10">
+    <div className="w-full space-y-6 sm:space-y-8 font-satoshi">
       {/* Search Input for directory mode */}
       {showFilters && (
-        <div className="max-w-xl pb-4">
+        <div className="max-w-xl pb-2">
           <div className="relative">
             <Search className="w-4 h-4 absolute left-0 top-1/2 -translate-y-1/2 text-sec-muted" />
             <input
@@ -45,7 +45,7 @@ export const CourseFinder: React.FC<CourseFinderProps> = ({
               placeholder="Filter by field of study..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-7 pr-4 py-3 text-sm bg-transparent border-b border-sec-gray-light text-sec-dark focus:border-sec-navy focus:outline-none transition-colors"
+              className="w-full pl-7 pr-4 py-2.5 text-sm bg-transparent border-b border-sec-gray-light text-sec-dark focus:border-sec-navy focus:outline-none transition-colors font-satoshi"
             />
             {searchTerm && (
               <button
@@ -66,26 +66,26 @@ export const CourseFinder: React.FC<CourseFinderProps> = ({
             key={field.num}
             onMouseEnter={() => setActiveField(field.title)}
             onMouseLeave={() => setActiveField(null)}
-            className="group py-6 sm:py-8 transition-colors duration-200"
+            className="group py-4 sm:py-5 transition-colors duration-200"
           >
             <Link
               href={`/courses?field=${encodeURIComponent(field.title)}`}
-              className="flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+              className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5"
             >
-              <div className="flex items-baseline gap-6 sm:gap-10">
-                <span className="font-mono text-xs sm:text-sm text-sec-red font-semibold">
+              <div className="flex items-baseline gap-5 sm:gap-8">
+                <span className="font-satoshi text-xs sm:text-sm text-sec-red font-semibold">
                   {field.num}
                 </span>
-                <span className="font-poppins text-xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-sec-dark group-hover:text-sec-navy group-hover:translate-x-2 transition-all duration-300">
+                <span className="font-satoshi text-xl sm:text-2xl lg:text-3xl font-bold uppercase tracking-tight text-sec-dark group-hover:text-sec-navy group-hover:translate-x-1.5 transition-all duration-300">
                   {field.title}
                 </span>
               </div>
 
-              <div className="flex items-center gap-6 pl-12 sm:pl-0">
-                <span className="font-inter text-xs text-sec-muted group-hover:text-sec-dark transition-colors hidden md:inline">
+              <div className="flex items-center gap-5 pl-10 sm:pl-0">
+                <span className="font-satoshi text-xs text-sec-muted group-hover:text-sec-dark transition-colors hidden md:inline">
                   {field.count}
                 </span>
-                <span className="text-sec-muted group-hover:text-sec-red group-hover:translate-x-2 transition-all duration-300 text-lg font-light">
+                <span className="text-sec-muted group-hover:text-sec-red group-hover:translate-x-1.5 transition-all duration-300 text-lg font-light">
                   →
                 </span>
               </div>
@@ -94,11 +94,11 @@ export const CourseFinder: React.FC<CourseFinderProps> = ({
         ))}
       </div>
 
-      <div className="pt-4 flex items-center justify-between text-xs text-sec-muted font-inter">
+      <div className="pt-3 flex items-center justify-between text-xs text-sec-muted font-satoshi">
         <span>Verified degree syllabus across 7 destination countries</span>
         <Link
           href="/courses"
-          className="editorial-link font-poppins font-semibold uppercase tracking-wider text-sec-navy hover:text-sec-red"
+          className="editorial-link font-satoshi font-semibold uppercase tracking-wider text-sec-navy hover:text-sec-red"
         >
           <span>Explore All Course Syllabi →</span>
         </Link>

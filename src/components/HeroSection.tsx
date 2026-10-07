@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { ArrowRight, Globe, CheckCircle2 } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
@@ -14,14 +17,21 @@ export const HeroSection: React.FC = () => {
       {/* Premium international undergraduate bachelor students on campus */}
       {/* ============================================================== */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <Image
-          src="/images/hero-students.jpg"
-          alt="International undergraduate bachelor students walking together across contemporary European university research campus"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[72%_center] sm:object-[68%_center] lg:object-[64%_center] scale-100 transition-transform duration-1000 ease-out"
-        />
+        <motion.div
+          initial={{ scale: 1.06, opacity: 0.85 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/images/hero-students.jpg"
+            alt="International undergraduate bachelor students walking together across contemporary European university research campus"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[72%_center] sm:object-[68%_center] lg:object-[64%_center] scale-100 transition-transform duration-1000 ease-out"
+          />
+        </motion.div>
 
         {/* ============================================================== */}
         {/* SUBTLE DARK / NAVY OVERLAY FOR MAXIMUM LEGIBILITY             */}
@@ -54,47 +64,75 @@ export const HeroSection: React.FC = () => {
       {/* EDITORIAL CONTENT DIRECTLY OVER THE IMAGE (LEFT-ALIGNED)       */}
       {/* No cards, no panels, no rounded corners, pure typography       */}
       {/* ============================================================== */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 sm:pt-36 lg:pt-32">
-        <div className="max-w-3xl space-y-6 sm:space-y-8">
+      {/* ============================================================== */}
+      {/* EDITORIAL CONTENT DIRECTLY OVER THE IMAGE (LEFT-ALIGNED)       */}
+      {/* No cards, no panels, no rounded corners, pure typography       */}
+      {/* ============================================================== */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 sm:pt-24 lg:pt-20">
+        <div className="max-w-3xl space-y-4 sm:space-y-5">
           
           {/* Eyebrow Label: WHAT WE ARE */}
-          <div className="inline-flex items-center gap-2.5">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2.5"
+          >
             <span className="w-2.5 h-2.5 bg-sec-red inline-block" />
-            <span className="font-poppins text-xs uppercase tracking-[0.26em] text-white/90 font-semibold">
+            <span className="text-xs uppercase tracking-[0.22em] text-white/90 font-semibold">
               WHAT WE ARE
             </span>
-          </div>
+          </motion.div>
 
           {/* Editorial Confident Headline (Directly over the image) */}
-          <h1 className="font-poppins text-4xl sm:text-6xl lg:text-7xl xl:text-[76px] font-bold tracking-tight text-white leading-[1.05]">
+          <motion.h1
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl sm:text-6xl lg:text-7xl xl:text-[76px] font-bold tracking-tight text-white leading-[1.05]"
+          >
             Empowering <br />
             Education for a <br />
             <span className="text-white">Global Future.</span>
-          </h1>
+          </motion.h1>
 
           {/* Description statement (Directly over the image, high negative space legibility) */}
-          <p className="font-inter text-base sm:text-lg lg:text-xl text-slate-200/95 max-w-xl sm:max-w-2xl leading-relaxed font-normal">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+            className="text-base sm:text-lg lg:text-xl text-slate-200/95 max-w-xl sm:max-w-2xl leading-relaxed font-normal"
+          >
             Direct institutional admissions from Kathmandu to accredited public research universities across Hungary, the Netherlands, Germany, the UK, the USA, and Australia.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons: Sharp rectangular edges, no rounded corners, no cards */}
-          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
-            <Link
-              href="/book-counselling"
-              className="px-8 sm:px-9 py-4 bg-sec-red hover:bg-sec-navy text-white text-xs sm:text-sm font-semibold uppercase tracking-wider font-poppins transition-all duration-300 inline-flex items-center justify-center gap-3 border border-sec-red shadow-lg hover:shadow-2xl hover:border-white/30"
-            >
-              <span>Book Free Counselling</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="pt-2 sm:pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
+          >
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                href="/book-counselling"
+                className="w-full sm:w-auto px-7 sm:px-8 py-3.5 bg-sec-red hover:bg-sec-navy text-white text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 inline-flex items-center justify-center gap-2.5 border border-sec-red shadow-lg hover:shadow-2xl hover:border-white/30 group"
+              >
+                <span>Book Free Counselling</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
+            </motion.div>
 
-            <Link
-              href="/study-destinations"
-              className="px-8 sm:px-9 py-4 bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm text-xs sm:text-sm font-semibold uppercase tracking-wider font-poppins transition-all duration-300 inline-flex items-center justify-center gap-2.5 border border-white/30 hover:border-white"
-            >
-              <span>Explore Destinations</span>
-              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </Link>
-          </div>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                href="/study-destinations"
+                className="w-full sm:w-auto px-7 sm:px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-300 inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white group"
+              >
+                <span>Explore Destinations</span>
+                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </Link>
+            </motion.div>
+          </motion.div>
 
         </div>
       </div>
@@ -103,8 +141,13 @@ export const HeroSection: React.FC = () => {
       {/* EDITORIAL BOTTOM ANCHOR STRIP (NO ROUNDED CORNERS, NO PANELS)  */}
       {/* Grounded campaign metadata anchored within the 100vh banner    */}
       {/* ============================================================== */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8 pt-4">
-        <div className="border-t border-white/20 pt-4 sm:pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-6 text-white/80 font-mono text-[11px] sm:text-xs">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-5 sm:pb-6 pt-3"
+      >
+        <div className="border-t border-white/20 pt-3 sm:pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-6 text-white/80 text-[11px] sm:text-xs">
           <div className="flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-white/95 font-medium tracking-wide">
@@ -118,7 +161,7 @@ export const HeroSection: React.FC = () => {
             <span className="hidden md:inline text-white/90">Estd. 2007 Kathmandu</span>
           </div>
         </div>
-      </div>
+      </motion.div>
 
     </section>
   );

@@ -38,17 +38,17 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <div className="pt-16 pb-14 sm:pt-20 sm:pb-20 font-satoshi">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
-        <div className="max-w-3xl space-y-4">
-          <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
+        <div className="max-w-3xl space-y-3">
+          <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red">
             Reach Our Office
           </span>
-          <h1 className="font-poppins text-4xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
+          <h1 className="font-satoshi text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
             Let&apos;s Start Your Global Journey
           </h1>
-          <p className="font-inter text-base sm:text-lg text-sec-muted leading-relaxed">
+          <p className="font-satoshi text-base sm:text-lg text-sec-muted leading-relaxed">
             Visit our office at Putilisadak-29 in Kathmandu, call our advisory desk directly, or submit an online inquiry.
           </p>
         </div>
@@ -56,15 +56,15 @@ export default function ContactPage() {
 
       {/* Main Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Contact Form Col (7 cols) */}
           <div className="lg:col-span-7">
             {submitted ? (
-              <div className="bg-white rounded-card border border-sec-gray-light p-8 sm:p-12 text-center shadow-card space-y-4">
-                <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle2 className="w-8 h-8" />
+              <div className="bg-white rounded-card border border-sec-gray-light p-6 sm:p-10 text-center shadow-card space-y-4">
+                <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-7 h-7" />
                 </div>
-                <h3 className="font-poppins text-2xl font-bold text-sec-dark">
+                <h3 className="font-satoshi text-xl sm:text-2xl font-bold text-sec-dark">
                   Message Sent Successfully
                 </h3>
                 <p className="text-sm text-sec-muted leading-relaxed">
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     setSubmitted(false);
                     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
                   }}
-                  className="mt-4 px-6 py-2.5 bg-sec-navy text-white text-xs font-semibold font-poppins rounded-btn hover:bg-sec-navy-dark transition-colors"
+                  className="mt-3 px-6 py-2.5 bg-sec-navy text-white text-xs font-semibold font-satoshi rounded-btn hover:bg-sec-navy-dark transition-colors"
                 >
                   Send Another Message
                 </button>
@@ -83,16 +83,16 @@ export default function ContactPage() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-card border border-sec-gray-light p-6 sm:p-10 shadow-card space-y-5"
+                className="bg-white rounded-card border border-sec-gray-light p-5 sm:p-8 shadow-card space-y-4"
                 noValidate
               >
-                <h3 className="font-poppins text-xl font-bold text-sec-dark pb-3 border-b border-sec-gray-light">
+                <h3 className="font-satoshi text-lg sm:text-xl font-bold text-sec-dark pb-3 border-b border-sec-gray-light">
                   Send an Inquiry
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-poppins">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-satoshi">
                       Your Name *
                     </label>
                     <input
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-poppins">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-satoshi">
                       Email Address *
                     </label>
                     <input
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-poppins">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-satoshi">
                       Phone Number
                     </label>
                     <input
@@ -145,7 +145,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-poppins">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-satoshi">
                       Subject
                     </label>
                     <input
@@ -159,7 +159,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-poppins">
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-sec-dark mb-1 font-satoshi">
                     Message *
                   </label>
                   <textarea
@@ -182,7 +182,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto px-8 py-3 bg-sec-red hover:bg-sec-red-dark text-white text-sm font-semibold font-poppins rounded-btn shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+                    className="w-full sm:w-auto px-7 py-2.5 bg-sec-red hover:bg-sec-red-dark text-white text-sm font-semibold font-satoshi rounded-btn shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
                   >
                     {loading ? (
                       <>
@@ -199,10 +199,10 @@ export default function ContactPage() {
           </div>
 
           {/* Details & Location Col (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white rounded-card border border-sec-gray-light p-6 sm:p-8 shadow-card space-y-6">
-              <div className="flex items-center gap-4 pb-1">
-                <div className="w-16 h-16 relative flex-shrink-0">
+          <div className="lg:col-span-5 space-y-5">
+            <div className="bg-white rounded-card border border-sec-gray-light p-5 sm:p-6 shadow-card space-y-4">
+              <div className="flex items-center gap-3.5 pb-1">
+                <div className="w-14 h-14 relative flex-shrink-0">
                   <Image
                     src="/images/sec-logo-transparent.png"
                     alt="Success Educational Consultancy Logo"
@@ -211,23 +211,23 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red block">
+                  <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red block">
                     Official Details
                   </span>
-                  <h3 className="font-poppins text-lg font-bold text-sec-dark mt-0.5">
+                  <h3 className="font-satoshi text-base sm:text-lg font-bold text-sec-dark mt-0.5">
                     {companyInfo.name}
                   </h3>
-                  <p className="text-xs text-sec-muted font-inter mt-0.5">
+                  <p className="text-xs text-sec-muted font-satoshi mt-0.5">
                     {companyInfo.tagline}
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-4 text-xs font-inter border-y border-sec-gray-light py-5">
+              <div className="space-y-3.5 text-xs font-satoshi border-y border-sec-gray-light py-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-sec-red mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong className="block text-sec-dark font-poppins text-sm">Kathmandu Office</strong>
+                    <strong className="block text-sec-dark font-satoshi text-sm">Kathmandu Office</strong>
                     <span className="text-sec-muted">{companyInfo.address}</span>
                   </div>
                 </div>
@@ -235,7 +235,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-sec-navy mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong className="block text-sec-dark font-poppins text-sm">Phone Numbers</strong>
+                    <strong className="block text-sec-dark font-satoshi text-sm">Phone Numbers</strong>
                     <span className="text-sec-muted">{companyInfo.phones.join(" / ")}</span>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-sec-navy mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong className="block text-sec-dark font-poppins text-sm">Email Address</strong>
+                    <strong className="block text-sec-dark font-satoshi text-sm">Email Address</strong>
                     <a href={`mailto:${companyInfo.email}`} className="text-sec-navy hover:underline">
                       {companyInfo.email}
                     </a>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Globe className="w-4 h-4 text-sec-navy mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong className="block text-sec-dark font-poppins text-sm">Web Identity</strong>
+                    <strong className="block text-sec-dark font-satoshi text-sm">Web Identity</strong>
                     <span className="text-sec-muted">{companyInfo.website}</span>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 text-sec-navy mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong className="block text-sec-dark font-poppins text-sm">Opening Hours</strong>
+                    <strong className="block text-sec-dark font-satoshi text-sm">Opening Hours</strong>
                     <span className="text-sec-muted">{companyInfo.workingHours}</span>
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function ContactPage() {
                   href={`https://wa.me/${companyInfo.whatsapp}?text=${encodeURIComponent(companyInfo.whatsappDefaultMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#25D366] text-white text-xs font-semibold font-poppins rounded-btn shadow-sm hover:opacity-95 transition-all text-center"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#25D366] text-white text-xs font-semibold font-satoshi rounded-btn shadow-sm hover:opacity-95 transition-all text-center"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Chat on WhatsApp Directly</span>
@@ -282,11 +282,11 @@ export default function ContactPage() {
             </div>
 
             {/* Map Placeholder / Location Notice */}
-            <div className="p-5 bg-sec-offwhite rounded-card border border-sec-gray-light text-xs text-sec-muted space-y-1">
-              <strong className="text-sec-dark font-poppins block text-xs">
+            <div className="p-4 bg-sec-offwhite rounded-card border border-sec-gray-light text-xs text-sec-muted space-y-1">
+              <strong className="text-sec-dark font-satoshi block text-xs">
                 Directions in Putilisadak:
               </strong>
-              <p className="leading-relaxed font-inter">
+              <p className="leading-relaxed font-satoshi">
                 Located centrally in Putilisadak-29 opposite major educational hubs and public transport connections in central Kathmandu. Parking and elevator access available.
               </p>
             </div>

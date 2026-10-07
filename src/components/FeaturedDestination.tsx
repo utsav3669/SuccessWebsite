@@ -8,9 +8,9 @@ export const FeaturedDestination: React.FC = () => {
   const d = featuredDestination;
 
   return (
-    <section className="py-20 sm:py-28 bg-sec-offwhite/50 border-t border-sec-gray-light">
+    <section className="py-14 sm:py-20 bg-sec-offwhite/50 border-t border-sec-gray-light font-satoshi">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Large Editorial Image with Landmark / Student Life */}
           <div className="lg:col-span-6 relative">
             <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-img overflow-hidden shadow-card border border-sec-gray-light">
@@ -24,12 +24,12 @@ export const FeaturedDestination: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-sec-navy-dark/70 via-transparent to-transparent pointer-events-none" />
 
               {/* Floating Highlight Card */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md rounded-lg border border-white/40 shadow-sm flex items-center justify-between">
+              <div className="absolute bottom-5 left-5 right-5 p-3.5 bg-white/95 backdrop-blur-md rounded-lg border border-white/40 shadow-sm flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-sec-red tracking-wider block font-poppins">
+                  <span className="text-[10px] uppercase font-bold text-sec-red tracking-wider block font-satoshi">
                     Heart of Europe
                   </span>
-                  <span className="text-sm font-bold text-sec-dark font-poppins">
+                  <span className="text-sm font-bold text-sec-dark font-satoshi">
                     Schengen Area & High Academic Standards
                   </span>
                 </div>
@@ -39,17 +39,17 @@ export const FeaturedDestination: React.FC = () => {
           </div>
 
           {/* Right Column: Editorial Hungary Story & Facts */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="space-y-2">
-              <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red flex items-center gap-1.5">
+          <div className="lg:col-span-6 space-y-5">
+            <div className="space-y-1.5">
+              <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red flex items-center gap-1.5">
                 <span>Featured Destination</span>
                 <span>•</span>
                 <span>Central Europe</span>
               </span>
-              <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-sec-dark tracking-tight">
+              <h2 className="font-satoshi text-2xl sm:text-4xl font-bold text-sec-dark tracking-tight">
                 Study in Hungary
               </h2>
-              <p className="font-inter text-sm sm:text-base text-sec-muted leading-relaxed">
+              <p className="font-satoshi text-sm sm:text-base text-sec-muted leading-relaxed">
                 Hungary is prominently featured in SEC&apos;s guidance portfolio. Positioned in the heart of Europe, it combines internationally accredited degrees, safe and historic student cities, and reasonable tuition fees with full European Union recognition.
               </p>
             </div>
@@ -57,33 +57,33 @@ export const FeaturedDestination: React.FC = () => {
             {/* Quick Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
               <div className="p-3 bg-white rounded-lg border border-sec-gray-light">
-                <span className="text-[11px] text-sec-muted block font-inter">Average Tuition</span>
-                <strong className="text-xs sm:text-sm text-sec-navy font-poppins font-semibold">
+                <span className="text-[11px] text-sec-muted block font-satoshi">Average Tuition</span>
+                <strong className="text-xs sm:text-sm text-sec-navy font-satoshi font-semibold">
                   {d.averageTuition}
                 </strong>
               </div>
               <div className="p-3 bg-white rounded-lg border border-sec-gray-light">
-                <span className="text-[11px] text-sec-muted block font-inter">Work Rights</span>
-                <strong className="text-xs sm:text-sm text-sec-navy font-poppins font-semibold">
+                <span className="text-[11px] text-sec-muted block font-satoshi">Work Rights</span>
+                <strong className="text-xs sm:text-sm text-sec-navy font-satoshi font-semibold">
                   {d.workRights}
                 </strong>
               </div>
               <div className="p-3 bg-white rounded-lg border border-sec-gray-light col-span-2 sm:col-span-1">
-                <span className="text-[11px] text-sec-muted block font-inter">Post-Study Permit</span>
-                <strong className="text-xs sm:text-sm text-sec-navy font-poppins font-semibold">
+                <span className="text-[11px] text-sec-muted block font-satoshi">Post-Study Permit</span>
+                <strong className="text-xs sm:text-sm text-sec-navy font-satoshi font-semibold">
                   {d.postStudyWork}
                 </strong>
               </div>
             </div>
 
             {/* Why Hungary Pillars */}
-            <div className="space-y-2.5 pt-2">
-              <h4 className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-dark">
+            <div className="space-y-2 pt-1">
+              <h4 className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-dark">
                 Why Nepalese Students Choose Hungary:
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5">
                 {d.keyBenefits.slice(0, 3).map((benefit, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-sec-muted font-inter">
+                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-sec-muted font-satoshi">
                     <CheckCircle2 className="w-4 h-4 text-sec-red mt-0.5 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
@@ -92,15 +92,15 @@ export const FeaturedDestination: React.FC = () => {
             </div>
 
             {/* Popular Universities Preview */}
-            <div className="pt-2">
-              <h4 className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-dark mb-2">
+            <div className="pt-1">
+              <h4 className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-dark mb-2">
                 Key University Options:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {d.universities.map((uni) => (
                   <span
                     key={uni.name}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-sec-gray-light rounded-md text-xs font-medium text-sec-dark"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-sec-gray-light rounded-md text-xs font-medium text-sec-dark font-satoshi"
                   >
                     <Building2 className="w-3 h-3 text-sec-navy" />
                     <span>{uni.name}</span>
@@ -110,10 +110,10 @@ export const FeaturedDestination: React.FC = () => {
             </div>
 
             {/* CTA */}
-            <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
               <Link
                 href="/study-destinations/hungary"
-                className="w-full sm:w-auto px-6 py-3 bg-sec-navy hover:bg-sec-navy-dark text-white text-xs sm:text-sm font-semibold font-poppins rounded-btn shadow-sm transition-colors flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto px-6 py-2.5 bg-sec-navy hover:bg-sec-navy-dark text-white text-xs sm:text-sm font-semibold font-satoshi rounded-btn shadow-sm transition-colors flex items-center justify-center gap-2 group"
               >
                 <span>Explore Hungary Opportunities</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -121,7 +121,7 @@ export const FeaturedDestination: React.FC = () => {
 
               <Link
                 href="/book-counselling?destination=Hungary"
-                className="text-xs sm:text-sm font-semibold text-sec-red hover:underline font-poppins"
+                className="text-xs sm:text-sm font-semibold text-sec-red hover:underline font-satoshi"
               >
                 Book Hungary Counselling →
               </Link>

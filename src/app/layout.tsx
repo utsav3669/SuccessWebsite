@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { GlobalScrollAnimate } from "@/components/GlobalScrollAnimate";
 import { companyInfo } from "@/data/company";
 
 export const viewport: Viewport = {
@@ -124,6 +125,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white text-sec-dark flex flex-col font-satoshi antialiased selection:bg-sec-navy selection:text-white">
+        <GlobalScrollAnimate />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

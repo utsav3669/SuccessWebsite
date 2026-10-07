@@ -334,19 +334,19 @@ export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="text-xl">{r.flag}</span>
                   <div>
-                    <h5 className="font-poppins text-xs font-bold uppercase tracking-wider text-white">
+                    <h5 className="font-satoshi text-xs font-bold uppercase tracking-wider text-white">
                       {r.country}
                     </h5>
-                    <span className="text-[10px] text-sec-gold font-mono block">
+                    <span className="text-[10px] text-sec-gold font-satoshi block">
                       {r.city} • {r.lat > 0 ? `${r.lat.toFixed(2)}°N` : `${Math.abs(r.lat).toFixed(2)}°S`},{" "}
                       {r.lon > 0 ? `${r.lon.toFixed(2)}°E` : `${Math.abs(r.lon).toFixed(2)}°W`}
                     </span>
                   </div>
                 </div>
-                <p className="text-[11px] text-slate-300 font-inter leading-relaxed">
+                <p className="text-[11px] text-slate-300 font-satoshi leading-relaxed">
                   {r.universities}
                 </p>
-                <div className="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-400 font-mono">
+                <div className="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-400 font-satoshi">
                   <span>KATHMANDU ({KATHMANDU_ORIGIN.lat}°N, {KATHMANDU_ORIGIN.lon}°E) → {r.city.toUpperCase()}</span>
                   <span className="text-sec-red font-semibold">DIRECT CORRIDOR</span>
                 </div>
@@ -358,7 +358,7 @@ export const GeographicWorldMap: React.FC<GeographicWorldMapProps> = ({
 
       {/* 7. RESTRAINED EDITORIAL GEOGRAPHIC LEGEND STRIP */}
       {interactive && (
-        <div className="absolute bottom-4 left-6 right-6 z-10 hidden sm:flex items-center justify-between text-[10px] font-mono tracking-wider text-slate-400 border-t border-white/10 pt-3">
+        <div className="absolute bottom-4 left-6 right-6 z-10 hidden sm:flex items-center justify-between text-[10px] font-satoshi tracking-wider text-slate-400 border-t border-white/10 pt-3">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-white">
               <span className="w-2 h-2 bg-sec-red rounded-full inline-block animate-pulse" />

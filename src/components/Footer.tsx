@@ -8,19 +8,19 @@ import { MapPin, Phone, Mail, Globe, ArrowUpRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-sec-navy-dark text-white pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-sec-navy-dark text-white pt-10 sm:pt-12 pb-8 border-t border-white/10 font-satoshi">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-white/10">
           {/* Col 1: Brand & Identity */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3.5">
             <SecLogo variant="dark" size="md" />
             
-            <p className="text-sm text-slate-300 max-w-sm leading-relaxed font-inter">
+            <p className="text-sm text-slate-300 max-w-sm leading-relaxed font-satoshi">
               Empowering education for a global future. Assisting ambitious students from Nepal in choosing their ideal destination, university, and accredited degree without misleading claims.
             </p>
 
-            <p className="text-[11px] font-mono text-sec-gold/80 italic tracking-wider">
+            <p className="text-[11px] font-satoshi text-sec-gold/80 italic tracking-wider">
               Foundational Legacy: &ldquo;{companyInfo.historicalTagline}&rdquo; • Established 2007
             </p>
 
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Destinations */}
           <div>
-            <h4 className="font-poppins text-xs font-semibold uppercase tracking-wider text-white mb-4">
+            <h4 className="font-satoshi text-xs font-semibold uppercase tracking-wider text-white mb-3 sm:mb-4">
               Destinations
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
@@ -76,7 +76,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Services */}
           <div>
-            <h4 className="font-poppins text-xs font-semibold uppercase tracking-wider text-white mb-4">
+            <h4 className="font-satoshi text-xs font-semibold uppercase tracking-wider text-white mb-3 sm:mb-4">
               Services
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Quick Navigation & Resources */}
           <div>
-            <h4 className="font-poppins text-xs font-semibold uppercase tracking-wider text-white mb-4">
+            <h4 className="font-satoshi text-xs font-semibold uppercase tracking-wider text-white mb-3 sm:mb-4">
               Company & Academy
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
@@ -157,7 +157,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Legal & Copyright Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
             <p>
               © {new Date().getFullYear()} {companyInfo.name} ({companyInfo.shortName}). All rights reserved.

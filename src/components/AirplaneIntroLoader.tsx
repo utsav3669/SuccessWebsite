@@ -222,7 +222,7 @@ export const AirplaneIntroLoader: React.FC<AirplaneIntroLoaderProps> = ({ onComp
         </div>
 
         {/* Minimal Typography Wordmark: SUCCESS EDUCATIONAL CONSULTANCY */}
-        <div className="flex items-center gap-1 sm:gap-2 mt-4 text-[11px] sm:text-xs md:text-sm font-poppins font-bold uppercase tracking-[0.12em] sm:tracking-[0.18em] flex-wrap justify-center text-center px-2 max-w-[92vw]">
+        <div className="flex items-center gap-1 sm:gap-2 mt-4 text-[11px] sm:text-xs md:text-sm font-satoshi font-bold uppercase tracking-[0.12em] sm:tracking-[0.18em] flex-wrap justify-center text-center px-2 max-w-[92vw]">
           <span className="text-white">SUCCESS</span>
           <span className="text-sec-red">EDUCATIONAL CONSULTANCY</span>
         </div>
@@ -237,7 +237,7 @@ export const AirplaneIntroLoader: React.FC<AirplaneIntroLoaderProps> = ({ onComp
         {/* Dynamic Connecting Status / Legacy Subtitle */}
         <div className="mt-2 h-5 flex items-center justify-center">
           <span
-            className={`text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.22em] transition-all duration-500 ${
+            className={`text-[10px] sm:text-[11px] font-satoshi uppercase tracking-[0.22em] transition-all duration-500 ${
               loaderStage === "connecting"
                 ? "text-sec-gold font-medium scale-105"
                 : "text-white/50"

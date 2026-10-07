@@ -26,6 +26,7 @@ module.exports = {
         poppins: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
         inter: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
         sans: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        mono: ["var(--font-satoshi)", "Satoshi", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0px",

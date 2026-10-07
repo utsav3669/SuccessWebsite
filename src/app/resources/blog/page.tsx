@@ -16,25 +16,25 @@ export default function BlogIndexPage() {
   const others = blogPosts.slice(1);
 
   return (
-    <div className="pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <div className="pt-16 pb-14 sm:pt-20 sm:pb-20 font-satoshi">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
-        <div className="max-w-3xl space-y-4">
-          <span className="font-poppins text-xs font-semibold uppercase tracking-wider text-sec-red">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
+        <div className="max-w-3xl space-y-3">
+          <span className="font-satoshi text-xs font-semibold uppercase tracking-wider text-sec-red">
             Insights & Guides
           </span>
-          <h1 className="font-poppins text-4xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
+          <h1 className="font-satoshi text-3xl sm:text-5xl font-bold text-sec-dark tracking-tight leading-tight">
             Articles & Updates
           </h1>
-          <p className="font-inter text-base sm:text-lg text-sec-muted leading-relaxed">
+          <p className="font-satoshi text-base sm:text-lg text-sec-muted leading-relaxed">
             Researched analysis on European universities, embassy interview dynamics, and scholarship opportunities.
           </p>
         </div>
       </section>
 
       {/* Featured Article */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-sec-offwhite rounded-card border border-sec-gray-light overflow-hidden p-6 sm:p-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center bg-sec-offwhite rounded-card border border-sec-gray-light overflow-hidden p-5 sm:p-7">
           <div className="lg:col-span-6 relative aspect-[16/10] rounded-img overflow-hidden bg-slate-200">
             <Image
               src={featured.image}
@@ -45,9 +45,9 @@ export default function BlogIndexPage() {
             />
           </div>
 
-          <div className="lg:col-span-6 space-y-4">
-            <div className="flex items-center gap-3 text-xs text-sec-muted font-inter">
-              <span className="px-2.5 py-1 bg-white font-semibold text-sec-navy rounded font-poppins">
+          <div className="lg:col-span-6 space-y-3">
+            <div className="flex items-center gap-3 text-xs text-sec-muted font-satoshi">
+              <span className="px-2.5 py-0.5 bg-white font-semibold text-sec-navy rounded font-satoshi">
                 {featured.category}
               </span>
               <span>•</span>
@@ -56,20 +56,20 @@ export default function BlogIndexPage() {
               <span>{featured.readTime}</span>
             </div>
 
-            <h2 className="font-poppins text-2xl sm:text-3xl font-bold text-sec-dark hover:text-sec-navy transition-colors">
+            <h2 className="font-satoshi text-2xl sm:text-3xl font-bold text-sec-dark hover:text-sec-navy transition-colors">
               <Link href={`/resources/blog/${featured.slug}`}>
                 {featured.title}
               </Link>
             </h2>
 
-            <p className="font-inter text-sm text-sec-muted leading-relaxed">
+            <p className="font-satoshi text-sm text-sec-muted leading-relaxed">
               {featured.excerpt}
             </p>
 
-            <div className="pt-2">
+            <div className="pt-1.5">
               <Link
                 href={`/resources/blog/${featured.slug}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-sec-red hover:bg-sec-red-dark text-white text-xs font-semibold font-poppins rounded-btn transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-sec-red hover:bg-sec-red-dark text-white text-xs font-semibold font-satoshi rounded-btn transition-colors"
               >
                 <span>Read Full Article</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -81,10 +81,10 @@ export default function BlogIndexPage() {
 
       {/* Grid of Other Articles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="font-poppins text-xl font-bold text-sec-dark mb-6">
+        <h3 className="font-satoshi text-xl font-bold text-sec-dark mb-4 sm:mb-5">
           More Educational Articles
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {others.map((post) => (
             <div
               key={post.slug}
@@ -99,13 +99,13 @@ export default function BlogIndexPage() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded text-[11px] font-semibold text-sec-navy">
+                  <div className="absolute top-3 left-3 px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded text-[11px] font-semibold text-sec-navy font-satoshi">
                     {post.category}
                   </div>
                 </div>
 
-                <div className="p-5 space-y-2.5">
-                  <div className="flex items-center gap-2 text-[11px] text-sec-muted">
+                <div className="p-4 sm:p-5 space-y-2">
+                  <div className="flex items-center gap-2 text-[11px] text-sec-muted font-satoshi">
                     <Calendar className="w-3 h-3" />
                     <span>{post.publishedDate}</span>
                     <span>•</span>
@@ -113,22 +113,22 @@ export default function BlogIndexPage() {
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h4 className="font-poppins text-base font-bold text-sec-dark group-hover:text-sec-navy transition-colors line-clamp-2">
+                  <h4 className="font-satoshi text-base font-bold text-sec-dark group-hover:text-sec-navy transition-colors line-clamp-2">
                     <Link href={`/resources/blog/${post.slug}`}>
                       {post.title}
                     </Link>
                   </h4>
 
-                  <p className="font-inter text-xs text-sec-muted line-clamp-2 leading-relaxed">
+                  <p className="font-satoshi text-xs text-sec-muted line-clamp-2 leading-relaxed">
                     {post.excerpt}
                   </p>
                 </div>
               </div>
 
-              <div className="p-5 pt-0">
+              <div className="p-4 sm:p-5 pt-0">
                 <Link
                   href={`/resources/blog/${post.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold font-poppins text-sec-red hover:text-sec-red-dark transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold font-satoshi text-sec-red hover:text-sec-red-dark transition-colors"
                 >
                   <span>Read article</span>
                   <ArrowRight className="w-3 h-3" />

@@ -100,7 +100,7 @@ export const CourseFinder: React.FC<CourseFinderProps> = ({
           href="/courses"
           className="editorial-link font-satoshi font-semibold uppercase tracking-wider text-sec-navy hover:text-sec-red"
         >
-          <span>Explore All Course Syllabi →</span>
+          <span>Explore All →</span>
         </Link>
       </div>
     </div>
